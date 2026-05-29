@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.auth-container {
+    background-color: #16213e;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #e94560;
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 2.8rem;
+    background-color: #0f3460;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 2px #e9456070;
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a2a2a2;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+}
+
+.btn:hover {
+    background-color: #d13550;
+}
+
+.btn:disabled {
+    background-color: #882c3b;
+    cursor: not-allowed;
+}
+
+.switch-page {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: #a2a2a2;
+}
+
+.switch-page a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.otp-section {
+    display: none;
+    margin-top: 1rem;
+}
+
+.alert {
+    padding: 0.7rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    display: none;
+}
+
+.alert.success {
+    background-color: #2e7d32;
+}
+
+.alert.error {
+    background-color: #c62828;
+}
