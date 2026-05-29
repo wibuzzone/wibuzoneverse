@@ -35,12 +35,12 @@ if (kirimOtpBtn) {
         kodeOTPBenar = buatKodeOTP();
 
         try {
-            // ✅ SUDAH DIISI SEMUA DATA KAMU
+            // ✅ DATA KAMU SUDAH BENAR DI SINI
             await emailjs.send(
                 "service_zdl5plo",      
                 "template_r0iozpq",    
                 {
-                    user_email: email,  // Sesuai variabel yang kita buat tadi
+                    user_email: email,
                     to_name: nama,
                     kode_otp: kodeOTPBenar
                 }
@@ -94,7 +94,7 @@ if (kirimOtpLoginBtn) {
         // Buat OTP untuk Login
         kodeOTPBenar = buatKodeOTP();
         
-        // ✅ SUDAH DIISI SEMUA DATA KAMU
+        // ✅ DATA KAMU SUDAH BENAR DI SINI
         try {
             await emailjs.send(
                 "service_zdl5plo",
