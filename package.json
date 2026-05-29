@@ -1,0 +1,25 @@
+{
+  "name": "wibuzoneverse",
+  "version": "1.0.0",
+  "description": "Koleksi lengkap anime dan film - WibuzoneVerse, bagian dari Wibuzone Brand",
+  "main": "wibuzoneverse/index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/[USERNAME_KAMU]/wibuzoneverse.git"
+  },
+  "keywords": [
+    "anime",
+    "film",
+    "wibuzone",
+    "wibuzoneverse",
+    "nonton",
+    "gratis"
+  ],
+  "author": "Wibuzone Team",
+  "license": "MIT",
+  "homepage": "https://wibuzoneverse.my.id"
+}
