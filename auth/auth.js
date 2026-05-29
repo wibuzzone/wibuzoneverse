@@ -35,19 +35,16 @@ if (kirimOtpBtn) {
         kodeOTPBenar = buatKodeOTP();
 
         try {
-            // 1. Kirim ke EMAIL (Pakai EmailJS)
+            // ✅ SUDAH DIISI SEMUA DATA KAMU
             await emailjs.send(
-                "GANTI_SERVICE_ID",      // <-- ID Layanan EmailJS
-                "GANTI_TEMPLATE_ID",    // <-- ID Template EmailJS
+                "service_zdl5plo",      
+                "template_r0iozpq",    
                 {
+                    user_email: email,  // Sesuai variabel yang kita buat tadi
                     to_name: nama,
-                    to_email: email,
                     kode_otp: kodeOTPBenar
                 }
             );
-
-            // 2. Kirim ke SMS (Opsional / Pakai layanan lain)
-            // Ini contoh nanti kita sambung ke API SMS ya
 
             tampilPesan('✅ Kode OTP sudah dikirim ke Email kamu! Cek Kotak Masuk/Spam', 'success');
             otpArea.style.display = 'block';
@@ -66,7 +63,7 @@ if (registerForm) {
         const inputOTP = document.getElementById('kode-otp').value;
 
         if (inputOTP === kodeOTPBenar) {
-            // SUKSES: Simpan ke LocalStorage (sementara) -> Nanti ganti ke Database
+            // SUKSES: Simpan ke LocalStorage
             localStorage.setItem('wibuzone_user', JSON.stringify(dataPengguna));
             tampilPesan('🎉 Berhasil daftar! Kamu akan dialihkan...', 'success');
             
@@ -97,14 +94,14 @@ if (kirimOtpLoginBtn) {
         // Buat OTP untuk Login
         kodeOTPBenar = buatKodeOTP();
         
-        // Kirim ke Email
+        // ✅ SUDAH DIISI SEMUA DATA KAMU
         try {
             await emailjs.send(
-                "GANTI_SERVICE_ID",
-                "GANTI_TEMPLATE_ID",
+                "service_zdl5plo",
+                "template_r0iozpq",
                 {
+                    user_email: emailInput,
                     to_name: userTersimpan.nama,
-                    to_email: userTersimpan.email,
                     kode_otp: kodeOTPBenar
                 }
             );
