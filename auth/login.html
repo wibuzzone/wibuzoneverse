@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk Akun | WibuzoneVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>🔐 Masuk Akun</h2>
+        <div id="alert-box" class="alert"></div>
+
+        <form id="login-form">
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email-login" placeholder="Email atau Nomor HP" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password-login" placeholder="Kata Sandi" required>
+            </div>
+
+            <button type="button" id="kirim-otp-login-btn" class="btn">Kirim Kode OTP Masuk</button>
+
+            <div class="otp-section" id="otp-area-login">
+                <div class="input-group">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="text" id="kode-otp-login" placeholder="Masukkan Kode OTP" maxlength="6" required>
+                </div>
+                <button type="submit" class="btn">Verifikasi & Masuk</button>
+            </div>
+        </form>
+
+        <div class="switch-page">
+            Belum punya akun? <a href="register.html">Daftar di sini</a>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("GANTI_DENGAN_PUBLIC_KEY_EMAILJS_KAMU");
+    </script>
+</body>
+</html>
