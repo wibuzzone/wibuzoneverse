@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Akun | WibuzoneVerse</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="./auth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,7 +13,6 @@
         <h2>📝 Daftar Akun Baru</h2>
         <div id="alert-box" class="alert"></div>
 
-        <!-- Form Data Diri -->
         <form id="register-form">
             <div class="input-group">
                 <i class="fa-solid fa-user"></i>
@@ -34,7 +33,6 @@
 
             <button type="button" id="kirim-otp-btn" class="btn">Kirim Kode OTP</button>
 
-            <!-- Bagian OTP -->
             <div class="otp-section" id="otp-area">
                 <div class="input-group">
                     <i class="fa-solid fa-key"></i>
@@ -45,20 +43,15 @@
         </form>
 
         <div class="switch-page">
-            Sudah punya akun? <a href="login.html">Masuk di sini</a>
+            Sudah punya akun? <a href="./login.html">Masuk di sini</a> | <a href="../index.html">← Kembali ke Beranda</a>
         </div>
     </div>
 
-        <script src="./auth.js"></script>
+    <script src="./auth.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- ✅ CARA PENULISAN YANG BENAR (JANGAN DIUBAH) -->
     <script>
-        // ✅ KUNCI YANG BENAR
-        (function(){
-            emailjs.init({
-                publicKey: "PNLaNf9VhbdWwlbBeRM7J",
-            });
-        })();
+        emailjs.init("M0YyYg4PBGlIjc-e0");
     </script>
-
 </body>
 </html>
