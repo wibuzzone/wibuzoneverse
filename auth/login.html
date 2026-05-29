@@ -39,11 +39,16 @@
         </div>
     </div>
 
-    <script src="auth.js"></script>
+       <script src="./auth.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // ✅ SUDAH DIISI PUBLIK KEY KAMU
-        emailjs.init("M0YyYg4PBGlIjc-e0");
+        // ✅ KUNCI YANG BENAR
+        (function(){
+            emailjs.init({
+                publicKey: "M0YyYg4PBGlIjc-e0",
+            });
+        })();
     </script>
+
 </body>
 </html>
