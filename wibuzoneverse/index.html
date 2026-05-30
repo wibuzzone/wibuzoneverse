@@ -4,8 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WibuzoneVerse | Dunia Anime Lengkap</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/wibuzzone/wibuzoneverse/refs/heads/main/wibuzoneverse/style.css"> <!-- ✅ SUDAH DIPERBAIKI -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ✅ SEMUA CSS LANGSUNG DI SINI, GAK PERLU FILE TERPISAH LAGI -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0f0f1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5rem;
+            background-color: #1a1a2e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #e94560;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e94560;
+        }
+
+        .btn-login {
+            padding: 0.5rem 1.2rem;
+            background-color: #e94560;
+            border-radius: 5px;
+            font-weight: 600 !important;
+        }
+
+        .btn-login:hover {
+            background-color: #d13550;
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(15, 15, 26, 0.8), rgba(15, 15, 26, 0.8)), url('../assets/bg-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #b8b8b8;
+            max-width: 700px;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            background-color: #e94560;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #d13550;
+        }
+
+        /* Anime List */
+        .anime-list {
+            padding: 4rem 5rem;
+        }
+
+        .anime-list h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .anime-list h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #e94560;
+        }
+
+        .anime-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .anime-card {
+            background-color: #1a1a2e;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            height: 280px;
+            background-color: #272744;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+
+        .anime-card h4 {
+            padding: 1rem 1rem 0.5rem;
+            font-size: 1rem;
+        }
+
+        .anime-card span {
+            padding: 0 1rem 1rem;
+            font-size: 0.8rem;
+            color: #888;
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1a1a2e;
+            text-align: center;
+            padding: 1.5rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsif buat HP */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            .anime-list {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -58,6 +263,9 @@
         <p>© 2026 WibuzoneVerse - Bagian dari Wibuzone Brand. All rights reserved.</p>
     </footer>
 
-    <script src="./script.js"></script> <!-- ✅ SUDAH DIPERBAIKI -->
+    <!-- ✅ JS Tetap ada di sini -->
+    <script>
+        console.log("✅ WibuzoneVerse siap beraksi! 🚀");
+    </script>
 </body>
 </html>
