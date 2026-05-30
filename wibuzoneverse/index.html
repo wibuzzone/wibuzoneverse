@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WibuzoneVerse | Dunia Anime Lengkap</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- ✅ SEMUA CSS LANGSUNG DI SINI, GAK PERLU FILE TERPISAH LAGI -->
     <style>
         * {
             margin: 0;
@@ -81,7 +81,7 @@
         /* Hero Section */
         .hero {
             height: 85vh;
-            background: linear-gradient(rgba(15, 15, 26, 0.8), rgba(15, 15, 26, 0.8)), url('../assets/bg-hero.jpg');
+            background: linear-gradient(rgba(15, 15, 26, 0.8), rgba(15, 15, 26, 0.8)), url('https://i.pinimg.com/originals/8c/8c/76/8c8c76d60f68f4d8a49e5b148b8e4f8a.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -89,6 +89,7 @@
             justify-content: center;
             text-align: center;
             padding: 0 2rem;
+            margin-bottom: 3rem;
         }
 
         .hero-content h2 {
@@ -121,7 +122,7 @@
 
         /* Anime List */
         .anime-list {
-            padding: 4rem 5rem;
+            padding: 0 5rem 4rem;
         }
 
         .anime-list h3 {
@@ -145,41 +146,98 @@
 
         .anime-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 2rem;
         }
 
         .anime-card {
             background-color: #1a1a2e;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .anime-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.25);
         }
 
         .card-img {
-            height: 280px;
-            background-color: #272744;
+            height: 290px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .anime-card:hover .card-img img {
+            transform: scale(1.08);
+        }
+
+        /* Rating & Info */
+        .rating {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.75);
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: #ffc107;
+            font-size: 0.85rem;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #888;
+            gap: 4px;
+        }
+
+        .views {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.75);
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .anime-info {
+            padding: 1rem;
         }
 
         .anime-card h4 {
-            padding: 1rem 1rem 0.5rem;
             font-size: 1rem;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .anime-card span {
-            padding: 0 1rem 1rem;
-            font-size: 0.8rem;
-            color: #888;
-            display: block;
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            color: #999;
+        }
+
+        .type-tag {
+            background-color: #e94560;
+            color: white;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 0.7rem;
         }
 
         /* Footer */
@@ -191,7 +249,7 @@
             font-size: 0.9rem;
         }
 
-        /* Responsif buat HP */
+        /* Responsif HP */
         @media (max-width: 768px) {
             .navbar {
                 padding: 1rem 1.5rem;
@@ -200,14 +258,12 @@
             }
             .nav-links {
                 gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
             }
             .hero-content h2 {
                 font-size: 2rem;
             }
             .anime-list {
-                padding: 2rem 1.5rem;
+                padding: 0 1.5rem 3rem;
             }
         }
     </style>
@@ -236,25 +292,139 @@
         </div>
     </section>
 
-    <!-- Daftar Anime Contoh -->
+    <!-- Daftar Anime Terpopuler -->
     <section id="daftar-anime" class="anime-list">
-        <h3>Anime Terbaru & Terpopuler</h3>
+        <h3>🔥 Anime Terpopuler</h3>
         <div class="anime-grid">
+
+            <!-- Attack on Titan -->
             <div class="anime-card">
-                <div class="card-img">[Gambar Anime 1]</div>
-                <h4>Judul Anime 1</h4>
-                <span>Episode 12 | Sedang Berjalan</span>
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/8c/2c/a0/8c2ca0d62d9f7e7b80a96b4c48f0e4c6.jpg" alt="Attack on Titan">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.8</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 12.8 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>Attack on Titan</h4>
+                    <div class="meta">
+                        <span>Final Season</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- One Piece -->
             <div class="anime-card">
-                <div class="card-img">[Gambar Anime 2]</div>
-                <h4>Judul Anime 2</h4>
-                <span>Movie | Selesai</span>
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/2e/8f/dc/2e8fdcf1f90409d780f04992a9b73d4c.jpg" alt="One Piece">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.7</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 15.3 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>One Piece</h4>
+                    <div class="meta">
+                        <span>Berjalan</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Demon Slayer -->
             <div class="anime-card">
-                <div class="card-img">[Gambar Anime 3]</div>
-                <h4>Judul Anime 3</h4>
-                <span>Episode 24 | Selesai</span>
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/6c/1e/a6/6c1ea607d8b99c108c88e7f0b8b46d6e.jpg" alt="Demon Slayer">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.9</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 14.1 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>Demon Slayer</h4>
+                    <div class="meta">
+                        <span>Season 4</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Naruto Shippuden -->
+            <div class="anime-card">
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/4c/87/7e/4c877e84290e2a9f94b78a20b4d0f6f7.jpg" alt="Naruto Shippuden">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.6</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 11.5 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>Naruto Shippuden</h4>
+                    <div class="meta">
+                        <span>Selesai</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jujutsu Kaisen -->
+            <div class="anime-card">
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/0a/9e/34/0a9e3494c94048d2c8f72b80e4d90b4c.jpg" alt="Jujutsu Kaisen">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.8</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 13.2 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>Jujutsu Kaisen</h4>
+                    <div class="meta">
+                        <span>Season 2</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dragon Ball Z -->
+            <div class="anime-card">
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/7c/f9/4c/7cf94c487f8e9f04094d09b74c4e848c.jpg" alt="Dragon Ball Z">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.5</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 9.8 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>Dragon Ball Z</h4>
+                    <div class="meta">
+                        <span>Klasik</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Hero Academia -->
+            <div class="anime-card">
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/9c/3f/9e/9c3f9e7f404c84c90e7c39d4b8e4c48c.jpg" alt="My Hero Academia">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.4</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 8.7 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>My Hero Academia</h4>
+                    <div class="meta">
+                        <span>Season 7</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tokyo Ghoul -->
+            <div class="anime-card">
+                <div class="card-img">
+                    <img src="https://i.pinimg.com/originals/8e/4c/9e/8e4c9e404c8494c90e7c394b8e4c48c.jpg" alt="Tokyo Ghoul">
+                    <div class="rating"><i class="fa-solid fa-star"></i> 9.3</div>
+                    <div class="views"><i class="fa-solid fa-eye"></i> 7.9 Jt</div>
+                </div>
+                <div class="anime-info">
+                    <h4>Tokyo Ghoul</h4>
+                    <div class="meta">
+                        <span>Selesai</span>
+                        <span class="type-tag">TV Series</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -263,7 +433,6 @@
         <p>© 2026 WibuzoneVerse - Bagian dari Wibuzone Brand. All rights reserved.</p>
     </footer>
 
-    <!-- ✅ JS Tetap ada di sini -->
     <script>
         console.log("✅ WibuzoneVerse siap beraksi! 🚀");
     </script>
